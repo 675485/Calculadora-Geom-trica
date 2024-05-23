@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Figuras Geométricas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Calculadora de Figuras Geométricas</h1>
+    <div class="input-group">
+        <label for="shapeSelect">Selecciona una figura:</label>
+        <select id="shapeSelect" onchange="showOptions()">
+            <option value="">Selecciona una figura</option>
+            <option value="circle">Círculo</option>
+            <option value="rectangle">Rectángulo</option>
+            <option value="triangle">Triángulo</option>
+            <option value="square">Cuadrado</option>
+            <option value="parallelogram">Paralelogramo</option>
+            <option value="trapezoid">Trapecio</option>
+            <option value="pentagon">Pentágono</option>
+            <option value="hexagon">Hexágono</option>
+        </select>
+    </div>
+
+    <div id="options" class="options" style="display: none;">
+        <div class="input-group">
+            <label for="calculationSelect">Selecciona qué deseas calcular:</label>
+            <select id="calculationSelect">
+                <option value="area">Área</option>
+                <option value="perimeter">Perímetro</option>
+            </select>
+        </div>
+        <div id="inputFields" class="input-fields"></div>
+        <button onclick="calculate()">Calcular</button>
+        <div id="result" class="result"></div>
+        <button onclick="resetPage()">Reiniciar Página</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
